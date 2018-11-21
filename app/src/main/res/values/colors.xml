@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="title_bar_bg_color">#EEEEEE</color>
+    <color name="title_bar_title_color">#454545</color>
+    <color name="line_gray_color">#D1D1D1</color>
+    <!--线条灰-->
+    <color name="lineGray">#E3E3E3</color>
+    <!--背景灰-->
+    <color name="backgroundGray">#F1F1F1</color>
+    <!--背景白-->
+    <color name="backgroundWhite">#FFFFFF</color>
+    <!--白-->
+    <color name="white">#FFFFFF</color>
+    <!--输入框灰-->
+    <color name="inputGray">#5e5a5a</color>
+    <!--字灰-->
+    <color name="fontGray">#ADADAD</color>
+    <!--字红-->
+    <color name="fontRed">#d62525</color>
+    <!--透明-->
+    <color name="transparent">#0fff</color>
+    <!--字黑-->
+    <color name="fontBlack">#000000</color>
+    <!--白-->
+    <color name="indexButtonWhite">#F9F9F9</color>
+    <!--橙-->
+    <color name="orange">#f74504</color>
+    <!--橙红-->
+    <color name="redOrange">#ff4f00</color>
+    <!--白灰-->
+    <color name="grayWhite">#F1F7F9</color>
+    <color name="divider">#ffd2d2d2</color>
+    <color name="alpha_1">#1000</color>
+    <color name="alpha_3">#3000</color>
+    <color name="gray_4">#333333</color>
+    <color name="gray_3">#666666</color>
+    <color name="gray_2">#999999</color>
+    <color name="gray_1">#b5b5b5</color>
+    <color name="alpha_complete">#0000</color>
+    <color name="red">#FF204C</color>
+    <color name="gray_light">#EBEBEB</color>
+    <color name="fooyo_tint_red">#ef5d6a</color>
+    <color name="fooyo_mid_green">#50b848</color>
+    <color name="fooyo_azure">#00aeef</color>
+</resources>

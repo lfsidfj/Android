@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.spiderman.example"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:name="com.spiderman.example.ExampleApplication">
+        <activity android:name=".ui.activity.test.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.test.SelectPictureActivity"/>
+        <activity android:name=".ui.activity.test.CutPictureActivity"/>
+        <activity android:name=".ui.activity.test.WebViewActivity"/>
+        <activity android:name=".ui.activity.test.DrawerLayoutActivity"/>
+        <activity android:name=".ui.activity.test.BannerActivity"/>
+        <activity android:name=".ui.activity.test.PickerViewActivity"/>
+        <activity android:name=".ui.activity.test.GoodsRecyclerViewActivity"/>
+        <activity android:name=".ui.activity.test.GoodsXRecyclerViewActivity"/>
+        <activity android:name=".ui.activity.test.GoodsListViewActivity"/>
+        <activity android:name=".ui.activity.test.ScanActivity"/>
+        <activity android:name=".ui.activity.test.GenerateActivity"/>
+        <activity android:name=".ui.activity.test.JpushActivity" android:exported="false">
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.test.JpushNoNotitifyActivity"/>
+        <activity android:name=".ui.activity.test.PushSetActivity"/>
+        <!-- 版本更新-->
+        <activity android:name=".ui.activity.test.UpdateVersionActivity"/>
+        <activity
+            android:name=".ui.activity.test.CustomVersionDialogActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/versionCheckLibvtransparentTheme" />
+        <service
+            android:name=".service.DemoService"
+            android:enabled="true"
+            android:exported="true" />
+        <!-- 版本更新-->
+        <activity android:name=".ui.activity.test.LetterActivity"/>
+        <activity android:name=".ui.activity.test.PhotoViewActivity"/>
+        <activity android:name=".ui.activity.test.DownLoadActivity"/>
+        <!-- 版本更新 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.spiderman.example.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name=".receiver.MyReceiver"
+            android:exported="false"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.spiderman.example" />
+            </intent-filter>
+        </receiver>
+
+        <!-- User defined.  For test only  用户自定义接收消息器,3.0.7开始支持,目前新tag/alias接口设置结果会在该广播接收器对应的方法中回调-->
+        <receiver android:name=".receiver.MyJPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.spiderman.example"></category>
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
