@@ -13,6 +13,8 @@ public interface BasePresenter {
 
     void receiveData(String object, String dataType, Class<? extends BaseBean> clazz);
 
+    void receiveData(String object, String dataType);
+
     void receiveHttpError(String error, String dataType);
 
     void setViewData(Object object, String dataType);
